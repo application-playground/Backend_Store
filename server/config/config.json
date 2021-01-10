@@ -1,0 +1,29 @@
+{
+  "devFromURL": {
+    "use_env_variable": "DATABASE_URL"
+  },
+  "development": {
+    "username": "postgres",
+    "password": "Hardik@1988",
+    "database": "backend-store-dev",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "Hardik@1988",
+    "database": "backend-store-test",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "Hardik@1988",
+    "database": "backend-store",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres"
+  }
+}
