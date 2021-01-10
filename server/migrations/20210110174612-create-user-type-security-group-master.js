@@ -10,11 +10,21 @@ module.exports = {
       },
       userTypeId: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: 'UserTypeMasters',
+          key: 'id',
+          as: 'userTypeId',
+        },
       },
       securityGroupId: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: 'SecurityGroupMasters',
+          key: 'id',
+          as: 'securityGroupId',
+        },
       },
       isActive: {
         type: Sequelize.BOOLEAN,

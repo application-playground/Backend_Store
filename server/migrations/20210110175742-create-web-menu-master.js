@@ -31,7 +31,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       parentId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'WebMenuMasters',
+          key: 'id',
+          as: 'parentId',
+        },
       },
       isNonMenuPage: {
         type: Sequelize.BOOLEAN,
