@@ -1,35 +1,33 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('ContactMasters', {
+    await queryInterface.createTable('AddressMasters', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      contactTypeId: {
+      addressLine1: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      addressLine2: {
+        type: Sequelize.STRING
+      },
+      addressLine3: {
+        type: Sequelize.STRING
+      },
+      pincode: {
+        type: Sequelize.STRING
+      },
+      addressTypeId: {
         type: Sequelize.INTEGER,
-        // onDelete: 'CASCADE',
         references: {
-          model: 'ContactTypeMasters',
+          model: 'AddressTypeMasters',
           key: 'id',
-          as: 'contactTypeId',
+          as: 'addressTypeId',
         },
-      },
-      countryId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'CountryMasters',
-          key: 'id',
-          as: 'countryId',
-        },
-      },
-      contactNumber: {
-        type: Sequelize.INTEGER
-      },
-      description: {
-        type: Sequelize.TEXT
       },
       isActive: {
         type: Sequelize.BOOLEAN,
@@ -38,16 +36,16 @@ module.exports = {
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        // defaultValue: current_timestamp
+        defaultValue: Sequelize.NOW
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        // defaultValue: current_timestamp
+        defaultValue: Sequelize.NOW
       }
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('ContactMasters');
+    await queryInterface.dropTable('AddressMasters');
   }
 };
