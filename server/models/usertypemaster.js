@@ -26,7 +26,7 @@
 
 export default (sequelize, DataTypes) => {
 
-  const UserTypeMaster = sequelize.define('', {
+  const UserTypeMaster = sequelize.define('UserTypeMaster', {
     typeName: {
       type: DataTypes.STRING,
       allowNull: false
