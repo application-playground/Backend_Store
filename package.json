@@ -6,6 +6,7 @@
   "scripts": {
     "start:dev": "nodemon ./bin/www",
     "start:app": "nodemon ./serverApp.js",
+    "reset-dev": "sequelize db:migrate:undo:all && sequelize db:migrate && sequelize db:seed --seed 20210110184859-generate-country-data.js 20210111043033-generate-state-data.js 20210112045355-generate-city-data.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "HARDIK CHAUHAN (+91 8866117741)",
