@@ -24,7 +24,8 @@
 //   return userTypeMaster;
 // };
 
-export default (sequelize, DataTypes) => {
+const { Model } = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
 
   const UserTypeMaster = sequelize.define('UserTypeMaster', {
     typeName: {

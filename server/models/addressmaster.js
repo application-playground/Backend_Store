@@ -26,9 +26,11 @@
 //   return AddressMaster;
 // };
 
-export default (sequelize, DataTypes) => {
+// 'use strict';
+const { Model } = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
   
-  const AddressMaster = sequelize.define('', {
+  const AddressMaster = sequelize.define('AddressMaster', {
     addressLine1: {
       type: DataTypes.STRING,
       allowNull: false

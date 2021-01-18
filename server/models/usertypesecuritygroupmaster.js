@@ -24,7 +24,8 @@
 //   return UserTypeSecurityGroupMaster;
 // };
 
-export default (sequelize, DataTypes) => {
+const { Model } = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
   const UserTypeSecurityGroupMaster = sequelize.define('UserTypeSecurityGroupMaster', {
     userTypeId: {
       type: DataTypes.INTEGER,

@@ -28,8 +28,8 @@
 //   });
 //   return UserMaster;
 // };
-
-export default (sequelize, DataTypes) => {
+const { Model } = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
 
   const UserMaster = sequelize.define('UserMaster', {
     userName: {

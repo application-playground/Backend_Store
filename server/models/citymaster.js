@@ -24,7 +24,8 @@
 //   return CityMaster;
 // };
 
-export default (sequelize, DataTypes) => {
+const { Model } = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
 
   const CityMaster = sequelize.define('CityMaster', {
     name: {

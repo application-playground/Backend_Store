@@ -23,7 +23,8 @@
 //   return AddressTypeMaster;
 // };
 
-export default (sequelize, DataTypes) => {
+const { Model } = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
   const AddressTypeMaster = sequelize.define('AddressTypeMaster', {
     name: {
       type: DataTypes.STRING,

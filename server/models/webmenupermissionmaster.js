@@ -28,7 +28,8 @@
 //   return WebMenuPermissionMaster;
 // };
 
-export default (sequelize, DataTypes) => {
+const { Model } = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
   const WebMenuPermissionMaster = sequelize.define('WebMenuPermissionMaster', {
     webMenuId: {
       type: DataTypes.INTEGER,

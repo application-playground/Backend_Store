@@ -26,7 +26,8 @@
 //   return ContactMaster;
 // };
 
-export default (sequelize, DataTypes) =>{
+const { Model } = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
   const ContactMaster = sequelize.define('ContactMaster', {
     contactTypeId: {
       type: DataTypes.INTEGER,

@@ -29,7 +29,8 @@
 //   return WebMenuMaster;
 // };
 
-export default (sequelize, DataTypes) => {
+const { Model } = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
   const WebMenuMaster = sequelize.define('WebMenuMaster', {
     name: {
       type: DataTypes.STRING,

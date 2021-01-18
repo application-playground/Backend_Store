@@ -26,7 +26,8 @@
 //   return SecurityGroupMaster;
 // };
 
-export default (sequelize, DataTypes) => {
+const { Model } = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
   const SecurityGroupMaster = sequelize.define('SecurityGroupMaster', {
     securityGroupName: {
       type: DataTypes.STRING,

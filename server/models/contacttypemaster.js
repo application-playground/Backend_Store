@@ -23,7 +23,8 @@
 //   return ContactTypeMaster;
 // };
 
-export default (sequelize, DataTypes) => {
+const { Model } = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
   const ContactTypeMaster = sequelize.define('ContactTypeMaster', {
     name: {
       type: DataTypes.STRING,

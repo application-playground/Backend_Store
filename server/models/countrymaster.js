@@ -24,14 +24,15 @@
 //   return CountryMaster;
 // };
 
-export default (sequelize, DataTypes) => {
+const { Model } = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
   const CountryMaster = sequelize.define('CountryMaster', {
     shortName: {
-      type: DataTypes.string,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     name: {
-      type: DataTypes.string,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     countryCode: {

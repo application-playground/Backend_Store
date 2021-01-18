@@ -29,7 +29,8 @@
 //   return ClientMaster;
 // };
 
-export default (sequelize, DataTypes) => {
+const { Model } = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
   const ClientMaster = sequelize.define('ClientMaster', {
     firstName: {
       type: DataTypes.STRING,
@@ -84,17 +85,17 @@ export default (sequelize, DataTypes) => {
   ClientMaster.associate = (models) => {
     //CONTACT-MASTER
     ClientMaster.belongsTo(models.ContactMaster, {
-      foreignKey: 'contactId',
+      foreignKey: 'ContactId',
       as: 'ContactMaster'
     });
     //EMAIL-MASTER
     ClientMaster.belongsTo(models.EmailMaster, {
-      foreignKey: 'emailId',
+      foreignKey: 'EmailId',
       as: 'EmailMaster'
     });
     //ADDRESS-MASTER
     ClientMaster.belongsTo(models.AddressMaster, {
-      foreignKey: 'addressId',
+      foreignKey: 'AddressId',
       as: 'AddressMaster'
     });
   };

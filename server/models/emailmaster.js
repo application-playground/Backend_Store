@@ -25,9 +25,9 @@
 //   return EmailMaster;
 // };
 
-import { DataTypes } from "sequelize/types";
 
-export default (sequelize, DataTypes) => {
+const { Model } = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
   const EmailMaster = sequelize.define('EmailMaster', {
     emailAddress: {
       type: DataTypes.STRING,
