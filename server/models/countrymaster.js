@@ -35,11 +35,19 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    countryCode: {
+    countrycode: {
       type: DataTypes.INTEGER,
       allowNull: false,
     }
   });
+
+  CountryMaster.associate = (models) => {
+    // COUNTRY-MASTER
+    CountryMaster.hasMany(models.StateMaster, { 
+      foreignKey: "id", 
+      as: "StateMasters", 
+    });
+  };
 
   return CountryMaster;
 };

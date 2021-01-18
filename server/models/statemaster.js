@@ -44,12 +44,10 @@ module.exports = (sequelize, DataTypes) => {
 
 
   StateMaster.associate = (models) => {
-    // COUNTRY-MASTER
     StateMaster.belongsTo(models.CountryMaster, {
-      foreignKey: 'countryId',
-      as: 'CountryMaster',
+      foreignKey: "countryId",
+      as: "CountryMasters",
     });
   };
-
   return StateMaster;
 };

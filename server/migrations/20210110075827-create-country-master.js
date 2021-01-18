@@ -14,7 +14,7 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      countryCode: {
+      countrycode: {
         type: Sequelize.INTEGER
       },
       createdAt: {
